@@ -476,20 +476,37 @@
             <form action="" class="modal-form" name="modal-form" autocomplete="">
                 <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
 
-                <label for="user-name">Имя</label>
-                <input class="modal-form-input" type="text" name="user-name" id="user-name" autocomplete="name">
+                <ul class="modal-form-list">
 
-                <label for="user-phone">Телефон</label>
-                <input class="modal-form-input" type="tel" name="user-phone" id="user-phone" autocomplete="tel">
+                    <li class="modal-form-item">
+                        <label class="modal-form-label" for="user-name">Имя</label>
+                        <input class="modal-form-input" type="text" name="user-name" id="user-name" autocomplete="name">
+                    </li>
 
-                <label for="user-mail">Почта</label>
-                <input class="modal-form-input" type="email" name="mail" id="user-mail" autocomplete="email">
+                    <li class="modal-form-item">
+                        <label class="modal-form-label" for="user-phone">Телефон</label>
+                        <input class="modal-form-input" type="tel" name="user-phone" id="user-phone" autocomplete="tel">
+                    </li>
 
-                <label for="comments">Комментарий</label>
-                <textarea name="comments" rows="6" id="comments"></textarea>
+                    <li class="modal-form-item">
+                        <label class="modal-form-label" for="user-mail">Почта</label>
+                        <input class="modal-form-input" type="email" name="mail" id="user-mail" autocomplete="email">
+                    </li>
+                    <li class="modal-form-item">
+                        <label class="modal-form-label" for="comments">Комментарий</label>
+                        <textarea class="modal-form-textarea" name="comments" rows="6" id="comments"
+                            placeholder="Введите текст"></textarea>
+                    </li>
 
-                <input type="checkbox" name="" value="yes" id="agreement">
-                <label for="agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+                </ul>
+
+                <p class="form-conditions">
+                    <input type="checkbox" name="" value="yes" id="agreement">
+                    <label for="agreement">Соглашаюсь с рассылкой и принимаю
+                        <a class="form-conditions-link" href="">Условия договора
+                        </a>
+                    </label>
+                </p>
 
                 <button type="submit" class="modal-form-button">Отправить</button>
 
