@@ -1094,7 +1094,7 @@ ul {
   cursor: pointer;
 }
 
-.modal-icon {
+.modal-icon-close {
   display: inline-flex;
   width: 11px;
   height: 11px;
@@ -1117,10 +1117,22 @@ ul {
   line-height: 1.2;
 }
 
+.modal-form-label {
+  display: inline-flex;
+}
+
 .modal-form-item {
+  margin-bottom: 10px;
+  padding: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 448px;
+  cursor: pointer;
+}
+
+.modal-form-item:hover .modal-form-input {
+  border: 1px solid var(--akcent-color);
 }
 
 .modal-form-label {
@@ -1130,7 +1142,6 @@ ul {
 }
 
 .modal-form-input {
-  margin-bottom: 10px;
   padding: 12px 42px;
   width: 448;
   height: 40px;
@@ -1139,6 +1150,8 @@ ul {
   border-radius: 4px;
 
   cursor: pointer;
+
+  /* transition: border 250ms var(--transition-timing); */
 }
 
 .modal-form-input:hover,
@@ -1146,7 +1159,23 @@ ul {
 .modal-form-input:active,
 .modal-form-textarea:hover,
 .modal-form-textarea:focus {
-  border: 1px solid var(--akcent-color);
+  border-color: var(--akcent-color);
+}
+
+.modal-icon {
+  display: inline-flex;
+  position: absolute;
+  top: 70%;
+  left: 15px;
+  transform: translateY(-70%);
+}
+
+.modal-form-input:hover + .modal-icon {
+  fill: var(--akcent-color);
+}
+
+.modal-form-input:focus + .modal-icon {
+  fill: var(--akcent-color);
 }
 
 .modal-form-textarea {
@@ -1168,6 +1197,49 @@ ul {
 
 .form-conditions-link {
   color: var(--akcent-color);
+}
+
+/* .form-checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-color: blue;
+} */
+
+.form-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-checkbox {
+  position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-checkbox-icon {
+  display: inline-flex;
+  margin-right: 8px;
+
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+
+  background-color: var(--bg-color);
+  fill: var(--bg-color);
+}
+
+.form-checkbox:checked + .form-checkbox-icon {
+  background-color: var(--akcent-color);
+  border: 0px;
+  /* fill: var(--bg-color); */
+}
+
+.form-checkbox:checked {
+  width: 50px;
+  height: 50px;
 }
 
 .modal-form-button {
