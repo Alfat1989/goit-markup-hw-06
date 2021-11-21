@@ -985,10 +985,17 @@ ul {
 .footer-form input {
   width: 358px;
   height: 50px;
+
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+
   border-radius: 4px;
   background-color: var(--footer-bg-color);
+  color: var(--second-bg-color);
+}
+
+.footer-input:focus {
+  outline: none;
 }
 
 .submit-button {
@@ -1078,6 +1085,9 @@ ul {
 
 .modal-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   top: 8px;
@@ -1151,7 +1161,7 @@ ul {
 
   cursor: pointer;
 
-  /* transition: border 250ms var(--transition-timing); */
+  transition: border 250ms var(--transition-timing);
 }
 
 .modal-form-input:hover,
@@ -1160,6 +1170,7 @@ ul {
 .modal-form-textarea:hover,
 .modal-form-textarea:focus {
   border-color: var(--akcent-color);
+  outline: none;
 }
 
 .modal-icon {
@@ -1168,6 +1179,8 @@ ul {
   top: 70%;
   left: 15px;
   transform: translateY(-70%);
+
+  transition: fill 250ms var(--transition-timing);
 }
 
 .modal-form-input:hover + .modal-icon {
